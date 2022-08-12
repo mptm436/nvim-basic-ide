@@ -52,6 +52,11 @@ Run nvim and wait for the plugins to be installed
 
 > **_NOTE_** Checkout this file for some predefined keymaps: [keymaps](https://github.com/LunarVim/nvim-basic-ide/blob/master/lua/user/keymaps.lua)
 
+### Fonts
+It is recommended to use the following repo to get a "Nerd Font" (Font that supports icons)
+[getnf](https://github.com/ronniedroid/getnf)
+
+
 ## Update
 
 One of the main reason that building neovim from source, is for version control, which makes your nvim ide unbreakable.
