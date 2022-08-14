@@ -1,4 +1,5 @@
 ## Build from source
+---
 
 ### Install Prerequisites
 
@@ -42,6 +43,7 @@ sudo make install
 
 ```
 
+
 ### Install the config
 
 `git clone https://github.com/LunarVim/nvim-basic-ide.git ~/.config/nvim`
@@ -52,12 +54,51 @@ Run nvim and wait for the plugins to be installed
 
 > **_NOTE_** Checkout this file for some predefined keymaps: [keymaps](https://github.com/LunarVim/nvim-basic-ide/blob/master/lua/user/keymaps.lua)
 
+
+## Configuration
+---
+### LSP
+
+
+Install `stylua` for linting `lua`
+before install `stylua`, you have to install cargo.
+```
+sudo apt update && sudo apt install cargo
+cargo install stylua
+```
+
+
+To see what LSPs are installed
+```
+:LspInstallInfo
+```
+and press `i` on the language server you wish to install, for python, it is recommended to install `pyright`
+Next you will need to add the server name to the list in `lsp-installer.lua` under dir `lua/user/lsp/`. 
+```
+local servers = {
+	"sumneko_lua",
+	"cssls",
+	"html",
+	"tsserver",
+	"pyright",
+	"bashls",
+	"jsonls",
+	"yamlls",
+}
+```
+
+### Formatters and Linters
+
+Config the `null-ls.lua` file to enable formatters and Linters
+
+
 ### Fonts
 It is recommended to use the following repo to get a "Nerd Font" (Font that supports icons)
 [getnf](https://github.com/ronniedroid/getnf)
 
 
 ## Update
+---
 
 One of the main reason that building neovim from source, is for version control, which makes your nvim ide unbreakable.
 Since every plugin is pinned to a specific commit, and tested with a specific version of neovim, You only update neovim when you have a whole new version sets of plugin tested with the new version of neovim.

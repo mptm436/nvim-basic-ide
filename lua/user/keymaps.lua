@@ -99,6 +99,3 @@ keymap("n", "<C-p>", "<cmd>lua require'illuminate'.next_reference{reverse=true,w
 
 -- Hop
 keymap("", "F", ":HopWordMW<cr>", opts)
-
--- Trouble
-keymap("n", "gR", "TroubleToggle lsp_references<CR>", opts)
