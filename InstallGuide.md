@@ -30,7 +30,7 @@ Install python support (node is optinoal)
   `npm i -g neovim`
 
 Install 'ripgrep' for Telescope to work:
-`sudo apt install repgrep`
+`sudo apt install ripgrep`
 
 ### Install from source
 
