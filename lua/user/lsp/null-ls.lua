@@ -23,7 +23,7 @@ null_ls.setup({
 		}),
 		formatting.stylua,
 		-- formatting.google_java_format,
-		diagnostics.flake8.with({ extra_args = { "--max-line-length=110", "--ignore=F403,F405" } }),
+		diagnostics.flake8.with({ extra_args = { "--max-line-length=110", "--ignore=F403,F405,W503" } }),
 		-- diagnostics.flake8.with({ extra_args = { "--max-line-length=88", "extend-ignore=E203" } }),
 	},
 
